@@ -640,9 +640,13 @@ placeFullAjax = function(){
 	    }else if(bspoke_response=="No files exist."){
 		alert("You doesn't seem to have created your profile yet.\nPlease create your profile at: "+serverUri)
 	    }else{
-		chrome.runtime.sendMessage({"status": "open","url": serverUri+"/"+bspoke_response}, function(response) {
-		    console.log(response.status);
-		});
+	    	if(isExtension){
+			chrome.runtime.sendMessage({"status": "open","url": serverUri+"/"+bspoke_response}, function(response) {
+		    		console.log(response.status);
+			});
+	    	}else{
+	    		window.open(serverUri+"/"+bspoke_response);
+	    	}
 		$("#bspoke-status").html("There's something interesting on this page, hold on while we create a new tab :)");
 		clean();
 	    }
