@@ -14,7 +14,7 @@ MAX_ARTICLES = 1000;
 //get all relevant links from the page.
 site = "muse.stanford.edu:9000/bespoke/"
 serverUri = "http://"+site;
-sserverUri = "https://"+site;
+sserverUri = "https://muse.stanford.edu:8443/bespoke/"
 width = 220;
 showing = false;
 expanded = false;
