@@ -163,6 +163,7 @@ function statusUpdate(){
 		fetchOnServer = true;
     if(fetchOnServer){
     	$("#status-pct").css("background-color","rgb(120, 235, 143)");
+    	console.log("Placing call to statusupdate with source as: statuses"+bspokeId);
    	$.ajax({
     	    type: "POST",
     	    url: serverUri+"/statusUpdate",
