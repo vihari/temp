@@ -12,7 +12,7 @@ else{
 MAX_ARTICLES = 1000;
 
 //get all relevant links from the page.
-serverUri = "http://muse.stanford.edu:9000/bespoke/";
+serverUri = "http://localhost:8080/bespoke";//"http://muse.stanford.edu:9000/bespoke/";
 width = 220;
 showing = false;
 expanded = false;
