@@ -1,0 +1,1 @@
+../bespoke/src/main/webapp/tablesorter/jquery-latest.js
