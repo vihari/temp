@@ -330,7 +330,7 @@ clean = function(){
 /**Receives cookie message from serverUri/cookie.jsp*/
 function receiveMessage(event){
     console.info("Received message: "+event.data+" from: "+event.origin);
-    if(serverUri.indexOf(event.origin)>-1){
+    if(sserverUri.indexOf(event.origin)>-1){
     	bspokeId = event.data;
     	console.log("Received cookie from right origin");
     	if(!isServerReachable()){
