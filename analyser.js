@@ -6,7 +6,7 @@ if(document.URL.match(/https?:\/\/www.google.*/i)!=null){
 else{
   //html += "<button id='force' class='bspoke-stuff' style='position:relative; top: -20px;'>Force Fetch</button>";
   TIMEOUT=50000;
-}get
+}
 
 //MAX_ARTICLES that is ok to crawl.
 MAX_ARTICLES = 1000;
