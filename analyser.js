@@ -147,7 +147,7 @@ function poll2(){
     if(numRequests>0)
     	setTimeout(poll2,500);
     else{
-    	if(root.querySelector("#fetchBehaviour")!=null)
+    	if(isExtension&&root.querySelector("#fetchBehaviour")!=null)
     		fetchOnServer = root.querySelector("#fetchBehaviour").checked;
     	else
     		fetchOnServer = true;
