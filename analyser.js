@@ -10,6 +10,8 @@ else{
 
 //MAX_ARTICLES that is ok to crawl.
 MAX_ARTICLES = 1000;
+//When ranking content from google, number pages to crawl.
+NUM_GOOGLE_PAGES=10;
 
 //get all relevant links from the page.
 site = "muse.stanford.edu:9000/bespoke/"
@@ -107,8 +109,6 @@ insertBee = function(){
 		  }
 		  showing = !showing;
 	  });
-	//When ranking content from google, number pages to crawl.
-	NUM_GOOGLE_PAGES=10;
 	same  = 0;
 	prevNumArticles = -1;
 	//serverUri = "http://localhost:8080/bespoke/";
