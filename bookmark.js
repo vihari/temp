@@ -2,7 +2,7 @@ load = function () {
     if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too
        script = document.createElement( 'script' );
 	   console.log("Loading jquery script");
-       script.src = 'http://muse.stanford.edu:9000/bespoke/tablesorter/jquery-latest.js';
+       script.src = '//raw.githack.com/vihari/temp/master/jquery-latest.js';
        script.onload=loadCookieScript;
        document.body.appendChild(script);
     } 
@@ -13,7 +13,7 @@ load = function () {
     function loadCookieScript() {
        script = document.createElement( 'script' );
        console.log("Loading jquery cookie script");
-       script.src = 'http://muse.stanford.edu:9000/bespoke/js/jquery_cookie/jquery.cookie.js';
+       script.src = '//raw.githack.com/vihari/temp/master/jquery.cookie.js';
        script.onload=loadBspokeAnalyser;
        document.body.appendChild(script);
     }
@@ -21,7 +21,7 @@ load = function () {
     function loadBspokeAnalyser(){
        script = document.createElement( 'script' );
        console.log("Loading analyser script");
-       script.src = 'http://localhost:8080/bespoke/js/analyser.js';
+       script.src = '//raw.githack.com/vihari/temp/master/analyser.js';
        script.onload=placeCall;
        document.body.appendChild(script);
     }
