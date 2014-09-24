@@ -12,7 +12,9 @@ else{
 MAX_ARTICLES = 1000;
 
 //get all relevant links from the page.
-serverUri = "http://localhost:8080/bespoke";//"http://muse.stanford.edu:9000/bespoke/";
+location = "muse.stanford.edu:9000/bespoke/"
+serverUri = "http://"+location;
+sserverUri = "https://"+location;
 width = 220;
 showing = false;
 expanded = false;
@@ -340,7 +342,7 @@ function receiveMessage(event){
 
 /*If the script is not in an extension then tries to get the cookie from the domain*/
 getCookie = function(){
-	$("body").append("<iframe src='"+serverUri+"/cookie.jsp"+"' width='0' height='0'></iframe>");
+	$("body").append("<iframe src='"+sserverUri+"/cookie.jsp"+"' width='0' height='0'></iframe>");
 	window.addEventListener("message", receiveMessage, false);
 };
 
