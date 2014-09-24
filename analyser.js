@@ -6,7 +6,7 @@ if(document.URL.match(/https?:\/\/www.google.*/i)!=null){
 else{
   //html += "<button id='force' class='bspoke-stuff' style='position:relative; top: -20px;'>Force Fetch</button>";
   TIMEOUT=50000;
-}
+}get
 
 //MAX_ARTICLES that is ok to crawl.
 MAX_ARTICLES = 1000;
@@ -223,7 +223,11 @@ function statusUpdate(){
 
 getNextPages = function(){
     $('#bspoke-status').html("Getting more pages on Google");
-    numPages = parseInt(document.getElementById("numGooglePages").value);
+    if(isExtension)
+    	numPages = parseInt(document.getElementById("numGooglePages").value);
+    else
+    	numPages = NUM_GOOGLE_PAGES;
+    	
     console.log("Num pages: "+numPages);
     if(numPages!=undefined&&typeof(numPages)!=undefined&&!isNaN(numPages))
 	NUM_GOOGLE_PAGES = numPages;	
